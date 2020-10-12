@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recording meeting_id="4a19aa71ed761546744bcd6f6415fc6983e46def-1602134581983" bbb_version="2.1.0">
+  <meeting id="4a19aa71ed761546744bcd6f6415fc6983e46def-1602134581983" externalId="5biidhvi34mxqrroiwnrzcmxokzad45cnjstnkpp" name="Home Room" breakout="false"/>
+  <metadata bbb-origin="Greenlight" bbb-origin-server-name="demobbb.ingeniumedu.com" bbb-origin-version="2.7.5" gl-listed="false" isBreakout="false" meetingId="5biidhvi34mxqrroiwnrzcmxokzad45cnjstnkpp" meetingName="Home Room"/>
+  <event timestamp="687453337" module="PRESENTATION" eventname="CreatePresentationPodEvent">
+    <currentPresenter/>
+    <timestampUTC>1602134581997</timestampUTC>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-10-08T05:23:01.997Z</date>
+  </event>
+  <event timestamp="687459723" module="PRESENTATION" eventname="ConversionCompletedEvent">
+    <originalFilename>default.pdf</originalFilename>
+    <timestampUTC>1602134588383</timestampUTC>
+    <presentationName>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602134581994</presentationName>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-10-08T05:23:08.383Z</date>
+  </event>
+  <event timestamp="687459724" module="PRESENTATION" eventname="SharePresentationEvent">
+    <timestampUTC>1602134588384</timestampUTC>
+    <presentationName>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602134581994</presentationName>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <share>true</share>
+    <date>2020-10-08T05:23:08.384Z</date>
+  </event>
+  <event timestamp="687459725" module="PRESENTATION" eventname="SetPresentationDownloadable">
+    <timestampUTC>1602134588385</timestampUTC>
+    <presentationName>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602134581994</presentationName>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-10-08T05:23:08.385Z</date>
+    <downloadable>false</downloadable>
+  </event>
+  <event timestamp="687758351" module="PARTICIPANT" eventname="EndAndKickAllEvent">
+    <timestampUTC>1602134887011</timestampUTC>
+    <reason>ENDED_WHEN_NOT_JOINED</reason>
+    <date>2020-10-08T05:28:07.011Z</date>
+  </event>
+</recording>

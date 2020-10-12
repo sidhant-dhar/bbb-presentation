@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<recording>
+  <id>49dbbc28ce75739ba2b2ba9db4478e10ef461687-1602306057435</id>
+  <state>published</state>
+  <published>true</published>
+  <start_time>1602306057435</start_time>
+  <end_time>1602306241133</end_time>
+  <participants>1</participants>
+  <meeting id="49dbbc28ce75739ba2b2ba9db4478e10ef461687-1602306057435" externalId="qftypywesort0gy4qg091pitouurx1vyofevojri" name="Home Room" breakout="false"/>
+  <meta>
+    <bbb-origin>Greenlight</bbb-origin>
+    <bbb-origin-server-name>demobbb.ingeniumedu.com</bbb-origin-server-name>
+    <bbb-origin-version>2.7.5</bbb-origin-version>
+    <gl-listed>false</gl-listed>
+    <isBreakout>false</isBreakout>
+    <meetingId>qftypywesort0gy4qg091pitouurx1vyofevojri</meetingId>
+    <meetingName>Home Room</meetingName>
+  </meta>
+  <playback>
+    <format>presentation</format>
+    <link>https://demobbb.ingeniumedu.com/playback/presentation/2.0/playback.html?meetingId=49dbbc28ce75739ba2b2ba9db4478e10ef461687-1602306057435</link>
+    <processing_time>12792</processing_time>
+    <duration>74055</duration>
+    <extensions>
+      <preview>
+        <images>
+          <image width="176" height="136" alt="Welcome To BigBlueButton">https://demobbb.ingeniumedu.com/presentation/49dbbc28ce75739ba2b2ba9db4478e10ef461687-1602306057435/presentation/d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602306057450/thumbnails/thumb-1.png</image>
+          <image width="176" height="136" alt="This slide left blank for whiteboard">https://demobbb.ingeniumedu.com/presentation/49dbbc28ce75739ba2b2ba9db4478e10ef461687-1602306057435/presentation/d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602306057450/thumbnails/thumb-2.png</image>
+          <image width="176" height="136" alt="This slide left blank for whiteboard">https://demobbb.ingeniumedu.com/presentation/49dbbc28ce75739ba2b2ba9db4478e10ef461687-1602306057435/presentation/d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602306057450/thumbnails/thumb-3.png</image>
+        </images>
+      </preview>
+    </extensions>
+    <size>263409</size>
+  </playback>
+  <raw_size>1207256</raw_size>
+</recording>

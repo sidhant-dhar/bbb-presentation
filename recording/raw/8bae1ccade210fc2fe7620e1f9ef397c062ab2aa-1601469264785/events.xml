@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recording meeting_id="8bae1ccade210fc2fe7620e1f9ef397c062ab2aa-1601469264785" bbb_version="2.1.0">
+  <meeting id="8bae1ccade210fc2fe7620e1f9ef397c062ab2aa-1601469264785" externalId="xpkmgm0zh4iqfh3aac05u89g4gailv3mhi6nwh4f" name="Home Room" breakout="false"/>
+  <metadata bbb-origin="Greenlight" bbb-origin-server-name="demobbb.ingeniumedu.com" bbb-origin-version="2.7.5" gl-listed="false" isBreakout="false" meetingId="xpkmgm0zh4iqfh3aac05u89g4gailv3mhi6nwh4f" meetingName="Home Room"/>
+  <event timestamp="22136151" module="PRESENTATION" eventname="CreatePresentationPodEvent">
+    <currentPresenter/>
+    <timestampUTC>1601469264811</timestampUTC>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-09-30T12:34:24.811Z</date>
+  </event>
+  <event timestamp="22142374" module="PRESENTATION" eventname="ConversionCompletedEvent">
+    <originalFilename>default.pdf</originalFilename>
+    <timestampUTC>1601469271034</timestampUTC>
+    <presentationName>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1601469264806</presentationName>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-09-30T12:34:31.034Z</date>
+  </event>
+  <event timestamp="22142377" module="PRESENTATION" eventname="SharePresentationEvent">
+    <timestampUTC>1601469271037</timestampUTC>
+    <presentationName>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1601469264806</presentationName>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <share>true</share>
+    <date>2020-09-30T12:34:31.037Z</date>
+  </event>
+  <event timestamp="22142379" module="PRESENTATION" eventname="SetPresentationDownloadable">
+    <timestampUTC>1601469271039</timestampUTC>
+    <presentationName>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1601469264806</presentationName>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-09-30T12:34:31.039Z</date>
+    <downloadable>false</downloadable>
+  </event>
+  <event timestamp="22234051" module="PARTICIPANT" eventname="ParticipantJoinEvent">
+    <name>Kaushik</name>
+    <timestampUTC>1601469362711</timestampUTC>
+    <role>MODERATOR</role>
+    <date>2020-09-30T12:36:02.711Z</date>
+    <externalUserId>gl-pzkwvfkqziwh</externalUserId>
+    <userId>w_ag5kmeluxcxa</userId>
+  </event>
+  <event timestamp="22234053" module="PARTICIPANT" eventname="AssignPresenterEvent">
+    <name>Kaushik</name>
+    <timestampUTC>1601469362713</timestampUTC>
+    <userid>w_ag5kmeluxcxa</userid>
+    <assignedBy>w_ag5kmeluxcxa</assignedBy>
+    <date>2020-09-30T12:36:02.713Z</date>
+  </event>
+  <event timestamp="22234067" module="PARTICIPANT" eventname="AssignPresenterEvent">
+    <name>Kaushik</name>
+    <timestampUTC>1601469362728</timestampUTC>
+    <userid>w_ag5kmeluxcxa</userid>
+    <assignedBy>w_ag5kmeluxcxa</assignedBy>
+    <date>2020-09-30T12:36:02.728Z</date>
+  </event>
+  <event timestamp="22234070" module="PRESENTATION" eventname="SetPresenterInPodEvent">
+    <timestampUTC>1601469362730</timestampUTC>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-09-30T12:36:02.730Z</date>
+    <nextPresenterId>w_ag5kmeluxcxa</nextPresenterId>
+  </event>
+  <event timestamp="22234106" module="PARTICIPANT" eventname="AssignPresenterEvent">
+    <name>Kaushik</name>
+    <timestampUTC>1601469362766</timestampUTC>
+    <userid>w_ag5kmeluxcxa</userid>
+    <assignedBy>w_ag5kmeluxcxa</assignedBy>
+    <date>2020-09-30T12:36:02.766Z</date>
+  </event>
+  <event timestamp="22234112" module="PRESENTATION" eventname="SetPresenterInPodEvent">
+    <timestampUTC>1601469362772</timestampUTC>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-09-30T12:36:02.772Z</date>
+    <nextPresenterId>w_ag5kmeluxcxa</nextPresenterId>
+  </event>
+  <event timestamp="22242475" module="WHITEBOARD" eventname="WhiteboardCursorMoveEvent">
+    <timestampUTC>1601469371135</timestampUTC>
+    <xOffset>-45.683492024739586</xOffset>
+    <date>2020-09-30T12:36:11.135Z</date>
+    <whiteboardId>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1601469264806/1</whiteboardId>
+    <pageNumber>0</pageNumber>
+    <userId>w_ag5kmeluxcxa</userId>
+    <yOffset>-21.204024420844185</yOffset>
+    <presentation>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1601469264806</presentation>
+  </event>
+  <event timestamp="23019632" module="PARTICIPANT" eventname="ParticipantJoinEvent">
+    <name>Kaushik</name>
+    <timestampUTC>1601470148292</timestampUTC>
+    <role>MODERATOR</role>
+    <date>2020-09-30T12:49:08.292Z</date>
+    <externalUserId>gl-pzkwvfkqziwh</externalUserId>
+    <userId>w_muijcfvknrvs</userId>
+  </event>
+  <event timestamp="23031171" module="PARTICIPANT" eventname="ParticipantLeftEvent">
+    <timestampUTC>1601470159831</timestampUTC>
+    <date>2020-09-30T12:49:19.831Z</date>
+    <userId>w_muijcfvknrvs</userId>
+  </event>
+  <event timestamp="23151171" module="PARTICIPANT" eventname="ParticipantLeftEvent">
+    <timestampUTC>1601470279831</timestampUTC>
+    <date>2020-09-30T12:51:19.831Z</date>
+    <userId>w_ag5kmeluxcxa</userId>
+  </event>
+  <event timestamp="23221170" module="PARTICIPANT" eventname="EndAndKickAllEvent">
+    <timestampUTC>1601470349830</timestampUTC>
+    <reason>ENDED_WHEN_LAST_USER_LEFT</reason>
+    <date>2020-09-30T12:52:29.830Z</date>
+  </event>
+</recording>

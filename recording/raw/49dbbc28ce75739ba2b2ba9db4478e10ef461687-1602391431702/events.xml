@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recording meeting_id="49dbbc28ce75739ba2b2ba9db4478e10ef461687-1602391431702" bbb_version="2.1.0">
+  <meeting id="49dbbc28ce75739ba2b2ba9db4478e10ef461687-1602391431702" externalId="qftypywesort0gy4qg091pitouurx1vyofevojri" name="Home Room" breakout="false"/>
+  <metadata bbb-origin="Greenlight" bbb-origin-server-name="demobbb.ingeniumedu.com" bbb-origin-version="2.7.5" gl-listed="false" isBreakout="false" meetingId="qftypywesort0gy4qg091pitouurx1vyofevojri" meetingName="Home Room"/>
+  <event timestamp="944303059" module="PRESENTATION" eventname="CreatePresentationPodEvent">
+    <currentPresenter/>
+    <timestampUTC>1602391431719</timestampUTC>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-10-11T04:43:51.719Z</date>
+  </event>
+  <event timestamp="944305318" module="PARTICIPANT" eventname="ParticipantJoinEvent">
+    <name>Mohit Patel</name>
+    <timestampUTC>1602391433978</timestampUTC>
+    <role>MODERATOR</role>
+    <date>2020-10-11T04:43:53.978Z</date>
+    <externalUserId>gl-iqsdohidgmoc</externalUserId>
+    <userId>w_w21ikdrp1ocj</userId>
+  </event>
+  <event timestamp="944305319" module="PARTICIPANT" eventname="AssignPresenterEvent">
+    <name>Mohit Patel</name>
+    <timestampUTC>1602391433979</timestampUTC>
+    <userid>w_w21ikdrp1ocj</userid>
+    <assignedBy>w_w21ikdrp1ocj</assignedBy>
+    <date>2020-10-11T04:43:53.979Z</date>
+  </event>
+  <event timestamp="944305325" module="PARTICIPANT" eventname="AssignPresenterEvent">
+    <name>Mohit Patel</name>
+    <timestampUTC>1602391433985</timestampUTC>
+    <userid>w_w21ikdrp1ocj</userid>
+    <assignedBy>w_w21ikdrp1ocj</assignedBy>
+    <date>2020-10-11T04:43:53.985Z</date>
+  </event>
+  <event timestamp="944305326" module="PRESENTATION" eventname="SetPresenterInPodEvent">
+    <timestampUTC>1602391433986</timestampUTC>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-10-11T04:43:53.986Z</date>
+    <nextPresenterId>w_w21ikdrp1ocj</nextPresenterId>
+  </event>
+  <event timestamp="944305331" module="PARTICIPANT" eventname="AssignPresenterEvent">
+    <name>Mohit Patel</name>
+    <timestampUTC>1602391433991</timestampUTC>
+    <userid>w_w21ikdrp1ocj</userid>
+    <assignedBy>w_w21ikdrp1ocj</assignedBy>
+    <date>2020-10-11T04:43:53.991Z</date>
+  </event>
+  <event timestamp="944305332" module="PRESENTATION" eventname="SetPresenterInPodEvent">
+    <timestampUTC>1602391433992</timestampUTC>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-10-11T04:43:53.992Z</date>
+    <nextPresenterId>w_w21ikdrp1ocj</nextPresenterId>
+  </event>
+  <event timestamp="944309474" module="PRESENTATION" eventname="ConversionCompletedEvent">
+    <originalFilename>default.pdf</originalFilename>
+    <timestampUTC>1602391438134</timestampUTC>
+    <presentationName>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602391431714</presentationName>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-10-11T04:43:58.134Z</date>
+  </event>
+  <event timestamp="944309475" module="PRESENTATION" eventname="SharePresentationEvent">
+    <timestampUTC>1602391438135</timestampUTC>
+    <presentationName>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602391431714</presentationName>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <share>true</share>
+    <date>2020-10-11T04:43:58.135Z</date>
+  </event>
+  <event timestamp="944309475" module="PRESENTATION" eventname="SetPresentationDownloadable">
+    <timestampUTC>1602391438135</timestampUTC>
+    <presentationName>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602391431714</presentationName>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-10-11T04:43:58.135Z</date>
+    <downloadable>false</downloadable>
+  </event>
+  <event timestamp="944335841" module="PRESENTATION" eventname="ResizeAndMoveSlideEvent">
+    <timestampUTC>1602391464501</timestampUTC>
+    <xOffset>0.0</xOffset>
+    <presentationName>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602391431714</presentationName>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <heightRatio>100.0</heightRatio>
+    <id>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602391431714/1</id>
+    <date>2020-10-11T04:44:24.501Z</date>
+    <yOffset>0.0</yOffset>
+    <widthRatio>100.0</widthRatio>
+  </event>
+  <event timestamp="944348076" module="PARTICIPANT" eventname="ParticipantLeftEvent">
+    <timestampUTC>1602391476736</timestampUTC>
+    <date>2020-10-11T04:44:36.736Z</date>
+    <userId>w_w21ikdrp1ocj</userId>
+  </event>
+  <event timestamp="944385644" module="PARTICIPANT" eventname="ParticipantJoinEvent">
+    <name>Mohit Patel</name>
+    <timestampUTC>1602391514304</timestampUTC>
+    <role>MODERATOR</role>
+    <date>2020-10-11T04:45:14.304Z</date>
+    <externalUserId>gl-iqsdohidgmoc</externalUserId>
+    <userId>w_mjpulzuyj0ob</userId>
+  </event>
+  <event timestamp="944385645" module="PARTICIPANT" eventname="AssignPresenterEvent">
+    <name>Mohit Patel</name>
+    <timestampUTC>1602391514305</timestampUTC>
+    <userid>w_mjpulzuyj0ob</userid>
+    <assignedBy>w_mjpulzuyj0ob</assignedBy>
+    <date>2020-10-11T04:45:14.305Z</date>
+  </event>
+  <event timestamp="944385652" module="PARTICIPANT" eventname="AssignPresenterEvent">
+    <name>Mohit Patel</name>
+    <timestampUTC>1602391514312</timestampUTC>
+    <userid>w_mjpulzuyj0ob</userid>
+    <assignedBy>w_mjpulzuyj0ob</assignedBy>
+    <date>2020-10-11T04:45:14.312Z</date>
+  </event>
+  <event timestamp="944385653" module="PRESENTATION" eventname="SetPresenterInPodEvent">
+    <timestampUTC>1602391514313</timestampUTC>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-10-11T04:45:14.313Z</date>
+    <nextPresenterId>w_mjpulzuyj0ob</nextPresenterId>
+  </event>
+  <event timestamp="944385659" module="PARTICIPANT" eventname="AssignPresenterEvent">
+    <name>Mohit Patel</name>
+    <timestampUTC>1602391514319</timestampUTC>
+    <userid>w_mjpulzuyj0ob</userid>
+    <assignedBy>w_mjpulzuyj0ob</assignedBy>
+    <date>2020-10-11T04:45:14.319Z</date>
+  </event>
+  <event timestamp="944385660" module="PRESENTATION" eventname="SetPresenterInPodEvent">
+    <timestampUTC>1602391514320</timestampUTC>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-10-11T04:45:14.320Z</date>
+    <nextPresenterId>w_mjpulzuyj0ob</nextPresenterId>
+  </event>
+  <event timestamp="944398076" module="PARTICIPANT" eventname="ParticipantLeftEvent">
+    <timestampUTC>1602391526736</timestampUTC>
+    <date>2020-10-11T04:45:26.736Z</date>
+    <userId>w_mjpulzuyj0ob</userId>
+  </event>
+  <event timestamp="944468076" module="PARTICIPANT" eventname="EndAndKickAllEvent">
+    <timestampUTC>1602391596736</timestampUTC>
+    <reason>ENDED_WHEN_LAST_USER_LEFT</reason>
+    <date>2020-10-11T04:46:36.736Z</date>
+  </event>
+</recording>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recording meeting_id="2c8928cd08fb9df14c39acff6472bbccf7718dbd-1602134185864" bbb_version="2.1.0">
+  <meeting id="2c8928cd08fb9df14c39acff6472bbccf7718dbd-1602134185864" externalId="1go5xxjlmpi6itp1tttt0xzjxpneju5pjegpaint" name="TestingRoomForRecording" breakout="false"/>
+  <metadata bbb-origin="Greenlight" bbb-origin-server-name="demobbb.ingeniumedu.com" bbb-origin-version="2.7.5" gl-listed="false" isBreakout="false" meetingId="1go5xxjlmpi6itp1tttt0xzjxpneju5pjegpaint" meetingName="TestingRoomForRecording"/>
+  <event timestamp="687057221" module="PRESENTATION" eventname="CreatePresentationPodEvent">
+    <currentPresenter/>
+    <timestampUTC>1602134185881</timestampUTC>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-10-08T05:16:25.881Z</date>
+  </event>
+  <event timestamp="687063372" module="PRESENTATION" eventname="ConversionCompletedEvent">
+    <originalFilename>default.pdf</originalFilename>
+    <timestampUTC>1602134192032</timestampUTC>
+    <presentationName>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602134185877</presentationName>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-10-08T05:16:32.032Z</date>
+  </event>
+  <event timestamp="687063373" module="PRESENTATION" eventname="SharePresentationEvent">
+    <timestampUTC>1602134192033</timestampUTC>
+    <presentationName>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602134185877</presentationName>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <share>true</share>
+    <date>2020-10-08T05:16:32.033Z</date>
+  </event>
+  <event timestamp="687063374" module="PRESENTATION" eventname="SetPresentationDownloadable">
+    <timestampUTC>1602134192034</timestampUTC>
+    <presentationName>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602134185877</presentationName>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-10-08T05:16:32.034Z</date>
+    <downloadable>false</downloadable>
+  </event>
+  <event timestamp="687362240" module="PARTICIPANT" eventname="EndAndKickAllEvent">
+    <timestampUTC>1602134490900</timestampUTC>
+    <reason>ENDED_WHEN_NOT_JOINED</reason>
+    <date>2020-10-08T05:21:30.900Z</date>
+  </event>
+</recording>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recording meeting_id="49dbbc28ce75739ba2b2ba9db4478e10ef461687-1602391167672" bbb_version="2.1.0">
+  <meeting id="49dbbc28ce75739ba2b2ba9db4478e10ef461687-1602391167672" externalId="qftypywesort0gy4qg091pitouurx1vyofevojri" name="Home Room" breakout="false"/>
+  <metadata bbb-origin="Greenlight" bbb-origin-server-name="demobbb.ingeniumedu.com" bbb-origin-version="2.7.5" gl-listed="false" isBreakout="false" meetingId="qftypywesort0gy4qg091pitouurx1vyofevojri" meetingName="Home Room"/>
+  <event timestamp="944039027" module="PRESENTATION" eventname="CreatePresentationPodEvent">
+    <currentPresenter/>
+    <timestampUTC>1602391167687</timestampUTC>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-10-11T04:39:27.687Z</date>
+  </event>
+  <event timestamp="944045445" module="PRESENTATION" eventname="ConversionCompletedEvent">
+    <originalFilename>default.pdf</originalFilename>
+    <timestampUTC>1602391174105</timestampUTC>
+    <presentationName>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602391167684</presentationName>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-10-11T04:39:34.105Z</date>
+  </event>
+  <event timestamp="944045446" module="PRESENTATION" eventname="SharePresentationEvent">
+    <timestampUTC>1602391174106</timestampUTC>
+    <presentationName>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602391167684</presentationName>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <share>true</share>
+    <date>2020-10-11T04:39:34.106Z</date>
+  </event>
+  <event timestamp="944045448" module="PRESENTATION" eventname="SetPresentationDownloadable">
+    <timestampUTC>1602391174108</timestampUTC>
+    <presentationName>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602391167684</presentationName>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-10-11T04:39:34.108Z</date>
+    <downloadable>false</downloadable>
+  </event>
+  <event timestamp="944130552" module="PARTICIPANT" eventname="ParticipantJoinEvent">
+    <name>Mohit Patel</name>
+    <timestampUTC>1602391259212</timestampUTC>
+    <role>MODERATOR</role>
+    <date>2020-10-11T04:40:59.212Z</date>
+    <externalUserId>gl-iqsdohidgmoc</externalUserId>
+    <userId>w_fn4zngin9uv2</userId>
+  </event>
+  <event timestamp="944130553" module="PARTICIPANT" eventname="AssignPresenterEvent">
+    <name>Mohit Patel</name>
+    <timestampUTC>1602391259213</timestampUTC>
+    <userid>w_fn4zngin9uv2</userid>
+    <assignedBy>w_fn4zngin9uv2</assignedBy>
+    <date>2020-10-11T04:40:59.213Z</date>
+  </event>
+  <event timestamp="944130562" module="PARTICIPANT" eventname="AssignPresenterEvent">
+    <name>Mohit Patel</name>
+    <timestampUTC>1602391259222</timestampUTC>
+    <userid>w_fn4zngin9uv2</userid>
+    <assignedBy>w_fn4zngin9uv2</assignedBy>
+    <date>2020-10-11T04:40:59.222Z</date>
+  </event>
+  <event timestamp="944130563" module="PRESENTATION" eventname="SetPresenterInPodEvent">
+    <timestampUTC>1602391259223</timestampUTC>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-10-11T04:40:59.223Z</date>
+    <nextPresenterId>w_fn4zngin9uv2</nextPresenterId>
+  </event>
+  <event timestamp="944130567" module="PARTICIPANT" eventname="AssignPresenterEvent">
+    <name>Mohit Patel</name>
+    <timestampUTC>1602391259227</timestampUTC>
+    <userid>w_fn4zngin9uv2</userid>
+    <assignedBy>w_fn4zngin9uv2</assignedBy>
+    <date>2020-10-11T04:40:59.227Z</date>
+  </event>
+  <event timestamp="944130568" module="PRESENTATION" eventname="SetPresenterInPodEvent">
+    <timestampUTC>1602391259228</timestampUTC>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <date>2020-10-11T04:40:59.228Z</date>
+    <nextPresenterId>w_fn4zngin9uv2</nextPresenterId>
+  </event>
+  <event timestamp="944162667" module="PRESENTATION" eventname="ResizeAndMoveSlideEvent">
+    <timestampUTC>1602391291327</timestampUTC>
+    <xOffset>0.0</xOffset>
+    <presentationName>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602391167684</presentationName>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <heightRatio>100.0</heightRatio>
+    <id>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602391167684/1</id>
+    <date>2020-10-11T04:41:31.327Z</date>
+    <yOffset>0.0</yOffset>
+    <widthRatio>100.0</widthRatio>
+  </event>
+  <event timestamp="944179451" module="PRESENTATION" eventname="ResizeAndMoveSlideEvent">
+    <timestampUTC>1602391308111</timestampUTC>
+    <xOffset>0.0</xOffset>
+    <presentationName>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602391167684</presentationName>
+    <podId>DEFAULT_PRESENTATION_POD</podId>
+    <heightRatio>100.0</heightRatio>
+    <id>d2d9a672040fbde2a47a10bf6c37b6a4b5ae187f-1602391167684/1</id>
+    <date>2020-10-11T04:41:48.111Z</date>
+    <yOffset>0.0</yOffset>
+    <widthRatio>100.0</widthRatio>
+  </event>
+  <event timestamp="944194046" module="PARTICIPANT" eventname="ParticipantLeftEvent">
+    <timestampUTC>1602391322706</timestampUTC>
+    <date>2020-10-11T04:42:02.706Z</date>
+    <userId>w_fn4zngin9uv2</userId>
+  </event>
+  <event timestamp="944264046" module="PARTICIPANT" eventname="EndAndKickAllEvent">
+    <timestampUTC>1602391392706</timestampUTC>
+    <reason>ENDED_WHEN_LAST_USER_LEFT</reason>
+    <date>2020-10-11T04:43:12.706Z</date>
+  </event>
+</recording>
