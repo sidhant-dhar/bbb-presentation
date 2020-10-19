@@ -48,16 +48,16 @@ function goToSlide(time) {
  * From: http://stackoverflow.com/questions/1634748/how-can-i-delete-a-query-string-parameter-in-javascript/4827730#4827730
  */
 function removeURLParameter(url, param) {
-  var urlparts= url.split('?');
-  if (urlparts.length>=2) {
-    var prefix= encodeURIComponent(param)+'=';
-    var pars= urlparts[1].split(/[&;]/g);
-    for (var i=pars.length; i-- > 0;) {
-      if (pars[i].indexOf(prefix, 0)==0)
+  var urlparts = url.split('?');
+  if (urlparts.length >= 2) {
+    var prefix = encodeURIComponent(param) + '=';
+    var pars = urlparts[1].split(/[&;]/g);
+    for (var i = pars.length; i-- > 0;) {
+      if (pars[i].indexOf(prefix, 0) == 0)
         pars.splice(i, 1);
     }
     if (pars.length > 0) {
-      return urlparts[0]+'?'+pars.join('&');
+      return urlparts[0] + '?' + pars.join('&');
     } else {
       return urlparts[0];
     }
@@ -81,27 +81,27 @@ function addURLParameter(url, param, value) {
  * From: http://stackoverflow.com/questions/6312993/javascript-seconds-to-time-with-format-hhmmss#6313008
  */
 function secondsToHHMMSS(secs) {
-  var hours   = Math.floor(secs / 3600);
+  var hours = Math.floor(secs / 3600);
   var minutes = Math.floor((secs - (hours * 3600)) / 60);
   var seconds = secs - (hours * 3600) - (minutes * 60);
 
-  if (hours   < 10) {hours   = "0"+hours;}
-  if (minutes < 10) {minutes = "0"+minutes;}
-  if (seconds < 10) {seconds = "0"+seconds;}
-  var time    = hours+':'+minutes+':'+seconds;
+  if (hours < 10) { hours = "0" + hours; }
+  if (minutes < 10) { minutes = "0" + minutes; }
+  if (seconds < 10) { seconds = "0" + seconds; }
+  var time = hours + ':' + minutes + ':' + seconds;
   return time;
 };
 
-secondsToYouTubeFormat = function(secs) {
-  var hours   = Math.floor(secs / 3600);
+secondsToYouTubeFormat = function (secs) {
+  var hours = Math.floor(secs / 3600);
   var minutes = Math.floor((secs - (hours * 3600)) / 60);
   var seconds = secs - (hours * 3600) - (minutes * 60);
 
   var time = "";
-  if (hours > 0)   {time += hours+"h";}
-  if (minutes > 0) {time += minutes+"m";}
-  if (seconds > 0) {time += seconds+"s";}
-  if (secs == 0) {time = "0s";}
+  if (hours > 0) { time += hours + "h"; }
+  if (minutes > 0) { time += minutes + "m"; }
+  if (seconds > 0) { time += seconds + "s"; }
+  if (secs == 0) { time = "0s"; }
 
   return time;
 };
@@ -110,17 +110,17 @@ secondsToYouTubeFormat = function(secs) {
  * Full word version of the above function for screen readers
  */
 function secondsToHHMMSSText(secs) {
-  var hours   = Math.floor(secs / 3600);
+  var hours = Math.floor(secs / 3600);
   var minutes = Math.floor((secs - (hours * 3600)) / 60);
   var seconds = secs - (hours * 3600) - (minutes * 60);
 
   var time = "";
-  if (hours   > 1) {time += hours   + " hours ";}
-  else if (hours   == 1) {time += hours   + " hour ";}
-  if (minutes > 1) {time += minutes + " minutes ";}
-  else if (minutes == 1) {time += minutes + " minute ";}
-  if (seconds > 1) {time += seconds + " seconds ";}
-  else if (seconds == 1) {time += seconds + " second ";}
+  if (hours > 1) { time += hours + " hours "; }
+  else if (hours == 1) { time += hours + " hour "; }
+  if (minutes > 1) { time += minutes + " minutes "; }
+  else if (minutes == 1) { time += minutes + " minute "; }
+  if (seconds > 1) { time += seconds + " seconds "; }
+  else if (seconds == 1) { time += seconds + " second "; }
 
   return time;
 };
@@ -161,20 +161,20 @@ function setEventsOnThumbnail($thumb) {
   pop.code({
     start: timeIn,
     end: timeOut,
-    onStart: function(options) {
+    onStart: function (options) {
       $parent = $(".thumbnail-wrapper").removeClass("active");
       $parent = $("#thumbnail-" + Math.ceil(options.start)).parent();
       $parent.addClass("active");
       animateToCurrentSlide();
     },
-    onEnd: function(options) {
+    onEnd: function (options) {
       $parent = $("#thumbnail-" + Math.ceil(options.start)).parent();
       $parent.removeClass("active");
     }
   });
 
   // Click on thumbnail changes the slide in popcorn
-  $thumb.parent().on("click", function() {
+  $thumb.parent().on("click", function () {
     var time = Math.ceil($thumb.attr("data-in"));
     goToSlide(time);
     replaceTimeOnURL(time);
@@ -182,10 +182,10 @@ function setEventsOnThumbnail($thumb) {
 
   // Mouse over/out to show/hide the label over the thumbnail
   $wrapper = $thumb.parent();
-  $wrapper.on("mouseover", function() {
+  $wrapper.on("mouseover", function () {
     $(this).addClass("hovered");
   });
-  $wrapper.on("mouseout", function() {
+  $wrapper.on("mouseout", function () {
     $(this).removeClass("hovered");
   });
 };
@@ -196,9 +196,9 @@ function animateToCurrentSlide() {
   var currentThumb = $(".thumbnail-wrapper.active");
   // Animate the scroll of thumbnails to center the current slide
   var thumbnailOffset = currentThumb.prop('offsetTop') - $container.prop('offsetTop') +
-      (currentThumb.prop('offsetHeight') - $container.prop('offsetHeight')) / 2;
+    (currentThumb.prop('offsetHeight') - $container.prop('offsetHeight')) / 2;
   $container.stop();
-  $container.animate({scrollTop: thumbnailOffset}, 200);
+  $container.animate({ scrollTop: thumbnailOffset }, 200);
 };
 
 /*
@@ -277,7 +277,7 @@ function generateThumbnails() {
     }
   }
 
-  imagesList.sort(function(a,b){return a - b});
+  imagesList.sort(function (a, b) { return a - b });
   for (var i in imagesList) {
     $("#thumbnails").append(elementsMap[imagesList[i]]);
   }
@@ -288,7 +288,7 @@ function loadCaptions(video) {
     logger.info("==Processing captions.json");
     var captions = JSON.parse(response.responseText);
     const video = document.getElementById("video");
-    captions.forEach(function(caption) {
+    captions.forEach(function (caption) {
       var track = document.createElement("track");
       track.setAttribute('kind', 'captions');
       track.setAttribute('label', caption['localeName']);
@@ -296,32 +296,31 @@ function loadCaptions(video) {
       track.setAttribute('src', url + '/caption_' + caption['locale'] + '.vtt');
       video.appendChild(track);
     });
-    document.dispatchEvent(new CustomEvent('media-ready', {'detail': 'captions'}));
+    document.dispatchEvent(new CustomEvent('media-ready', { 'detail': 'captions' }));
   }, function (response) {
     logger.info("==Video has no captions");
-    document.dispatchEvent(new CustomEvent('media-ready', {'detail': 'captions'}));
+    document.dispatchEvent(new CustomEvent('media-ready', { 'detail': 'captions' }));
   });
 };
 
 function loadVideo() {
   logger.info("==Loading video");
   var video = document.createElement("video");
-  video.setAttribute('id','video');
-  video.setAttribute('class','webcam');
-  video.setAttribute('preload','auto');
-  video.setAttribute('playsinline',true);
-  video.setAttribute('crossorigin','anonymous');
+  video.setAttribute('id', 'video');
+  video.setAttribute('class', 'webcam');
+  video.setAttribute('preload', 'auto');
+  video.setAttribute('playsinline', true);
+  video.setAttribute('crossorigin', 'anonymous');
 
   let webmsource = document.createElement("source");
   webmsource.setAttribute('src', url + '/video/webcams.webm');
-  webmsource.setAttribute('type','video/webm; codecs="vp8.0, vorbis"');
+  webmsource.setAttribute('type', 'video/webm; codecs="vp8.0, vorbis"');
   video.appendChild(webmsource);
 
   let mp4source = document.createElement("source");
   mp4source.setAttribute('src', url + '/video/webcams.mp4');
-  mp4source.setAttribute('type','video/mp4; codecs="avc1.42E01E"');
+  mp4source.setAttribute('type', 'video/mp4; codecs="avc1.42E01E"');
   video.appendChild(mp4source);
-
   video.setAttribute('data-timeline-sources', chatXML);
 
   document.getElementById("video-area").appendChild(video);
@@ -333,7 +332,7 @@ function loadVideo() {
 
 function loadAudio() {
   logger.info("==Loading audio")
-  var audio = document.createElement("audio") ;
+  var audio = document.createElement("audio");
   audio.setAttribute('id', 'video');
   audio.setAttribute('preload', 'auto');
 
@@ -370,22 +369,22 @@ function loadAudio() {
 function loadDeskshare() {
   logger.info("==Loading deskshare");
   var deskshareVideo = document.createElement("video");
-  deskshareVideo.setAttribute('id','deskshare-video');
-  deskshareVideo.setAttribute('preload','auto');
-  deskshareVideo.setAttribute('playsinline',true);
+  deskshareVideo.setAttribute('id', 'deskshare-video');
+  deskshareVideo.setAttribute('preload', 'auto');
+  deskshareVideo.setAttribute('playsinline', true);
 
   var webmsource = document.createElement("source");
   webmsource.setAttribute('src', url + '/deskshare/deskshare.webm');
-  webmsource.setAttribute('type','video/webm; codecs="vp8.0, vorbis"');
+  webmsource.setAttribute('type', 'video/webm; codecs="vp8.0, vorbis"');
   deskshareVideo.appendChild(webmsource);
 
   var mp4source = document.createElement("source");
   mp4source.setAttribute('src', url + '/deskshare/deskshare.mp4');
-  mp4source.setAttribute('type','video/mp4; codecs="avc1.42E01E"');
+  mp4source.setAttribute('type', 'video/mp4; codecs="avc1.42E01E"');
   deskshareVideo.appendChild(mp4source);
 
   var presentationArea = document.getElementById("presentation-area");
-  presentationArea.insertBefore(deskshareVideo,presentationArea.childNodes[0]);
+  presentationArea.insertBefore(deskshareVideo, presentationArea.childNodes[0]);
 
   checkLoadedDeskshare();
 };
@@ -402,25 +401,25 @@ function setMediaSync() {
   allMedias = [primaryMedia].concat(secondaryMedias);
 
   // When we play the master video, we play all other videos as well...
-  primaryMedia.on("play", function() {
-    for (i = 0; i < secondaryMedias.length ; i++) {
+  primaryMedia.on("play", function () {
+    for (i = 0; i < secondaryMedias.length; i++) {
       secondaryMedias[i].play();
     }
   });
 
   // When we pause the master video, we sync
-  primaryMedia.on("pause", function() {
+  primaryMedia.on("pause", function () {
     sync();
   });
 
-  primaryMedia.on("seeking", function() {
+  primaryMedia.on("seeking", function () {
     if (primaryMedia.played().length != 0) {
       mediaSeeked = true;
     }
   });
 
   // When finished seeking, we sync all medias...
-  primaryMedia.on("seeked", function() {
+  primaryMedia.on("seeked", function () {
     if (primaryMedia.paused()) {
       sync();
     } else {
@@ -428,8 +427,8 @@ function setMediaSync() {
     }
   });
 
-  for (i = 0; i < allMedias.length ; i++) {
-    allMedias[i].on("waiting", function() {
+  for (i = 0; i < allMedias.length; i++) {
+    allMedias[i].on("waiting", function () {
       // If one of the medias is 'waiting', we must sync
       if (!primaryMedia.seeking() && !mediaSyncing) {
         mediaSyncing = true;
@@ -439,10 +438,10 @@ function setMediaSync() {
       }
     });
 
-    allMedias[i].on("canplay", function() {
+    allMedias[i].on("canplay", function () {
       if (mediaSyncing || mediaSeeked) {
         var allMediasAreReady = true;
-        for (i = 0; i < allMedias.length ; i++) {
+        for (i = 0; i < allMedias.length; i++) {
           allMediasAreReady &= (allMedias[i].media.readyState == 4);
         }
 
@@ -459,7 +458,7 @@ function setMediaSync() {
 };
 
 function sync() {
-  for (var i = 0; i < secondaryMedias.length ; i++) {
+  for (var i = 0; i < secondaryMedias.length; i++) {
     if (secondaryMedias[i].media.readyState > 1) {
       secondaryMedias[i].pause();
       // Set the current time will fire a "canplay" event to tell us that the video can be played...
@@ -471,20 +470,20 @@ function sync() {
 function setMediaListeners() {
   // Solo media
   primaryMedia = Popcorn("#video");
-  primaryMedia.on("seeking", function() {
+  primaryMedia.on("seeking", function () {
     if (primaryMedia.played().length != 0) {
       mediaSeeked = true;
     }
   });
 
   // When finished seeking
-  primaryMedia.on("seeked", function() {
+  primaryMedia.on("seeked", function () {
     if (!primaryMedia.paused()) {
       primaryMedia.pause();
     }
   });
 
-  primaryMedia.on("canplay", function() {
+  primaryMedia.on("canplay", function () {
     if (mediaSeeked) {
       mediaSeeked = false;
       logger.debug("==Resuming");
@@ -499,23 +498,23 @@ function forceMediaEvents() {
   if (mediaReady) return;
   if (hasVideo) {
     logger.debug("==Forcing video/captions ready event");
-    document.dispatchEvent(new CustomEvent('media-ready', {'detail': 'video'}));
-    document.dispatchEvent(new CustomEvent('media-ready', {'detail': 'captions'}));
+    document.dispatchEvent(new CustomEvent('media-ready', { 'detail': 'video' }));
+    document.dispatchEvent(new CustomEvent('media-ready', { 'detail': 'captions' }));
   } else {
     logger.debug("==Forcing audio ready event");
-    document.dispatchEvent(new CustomEvent('media-ready', {'detail': 'audio'}));
+    document.dispatchEvent(new CustomEvent('media-ready', { 'detail': 'audio' }));
   }
   if (hasDeskshare) {
     logger.debug("==Forcing deskshare ready event");
-    document.dispatchEvent(new CustomEvent('media-ready', {'detail': 'deskshare'}));
+    document.dispatchEvent(new CustomEvent('media-ready', { 'detail': 'deskshare' }));
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   logger.info("==DOM content loaded");
   loadMetadata();
   checkMedias();
-  document.dispatchEvent(new CustomEvent('content-ready', {'detail': 'dom'}));
+  document.dispatchEvent(new CustomEvent('content-ready', { 'detail': 'dom' }));
 }, false);
 
 function loadPlayback() {
@@ -548,7 +547,7 @@ function loadPlayback() {
     theme: 'bigbluebutton',
     volumeSlider: 'vertical'
   });
-  $('#video').on("swap", function() {
+  $('#video').on("swap", function () {
     swapVideoPresentation();
   });
 
@@ -557,7 +556,7 @@ function loadPlayback() {
   } else {
     setMediaListeners();
     logger.debug("==Recording has no deskshare");
-    document.dispatchEvent(new CustomEvent('media-ready', {'detail': 'deskshare'}));
+    document.dispatchEvent(new CustomEvent('media-ready', { 'detail': 'deskshare' }));
   }
 };
 
@@ -573,9 +572,9 @@ function checkLoadedMedia() {
   let media = $('#video')[0];
   if (isMediaReady(media)) {
     if (hasVideo) {
-      document.dispatchEvent(new CustomEvent('media-ready', {'detail': 'video'}));
+      document.dispatchEvent(new CustomEvent('media-ready', { 'detail': 'video' }));
     } else {
-      document.dispatchEvent(new CustomEvent('media-ready', {'detail': 'audio'}));
+      document.dispatchEvent(new CustomEvent('media-ready', { 'detail': 'audio' }));
     }
   } else {
     setTimeout(checkLoadedMedia, mediaCheckInterval);
@@ -585,7 +584,7 @@ function checkLoadedMedia() {
 function checkLoadedDeskshare() {
   let deskshare = $('#deskshare-video')[0];
   if (isMediaReady(deskshare)) {
-    document.dispatchEvent(new CustomEvent('media-ready', {'detail': 'deskshare'}));
+    document.dispatchEvent(new CustomEvent('media-ready', { 'detail': 'deskshare' }));
   } else {
     setTimeout(checkLoadedDeskshare, mediaCheckInterval);
   }
@@ -593,7 +592,7 @@ function checkLoadedDeskshare() {
 
 var secondsToWait = 0;
 
-function addTime(time){
+function addTime(time) {
   if (secondsToWait === 0) {
     Popcorn('#video').pause();
     window.setTimeout("Tick()", 1000);
@@ -652,12 +651,12 @@ function Tick() {
 // Swap the position of the DOM elements `elm1` and `elm2`.
 function swapElements(elm1, elm2) {
   var parent1, next1,
-      parent2, next2;
+    parent2, next2;
 
   parent1 = elm1.parentNode;
-  next1   = elm1.nextSibling;
+  next1 = elm1.nextSibling;
   parent2 = elm2.parentNode;
-  next2   = elm2.nextSibling;
+  next2 = elm2.nextSibling;
 
   parent1.insertBefore(elm2, next1);
   parent2.insertBefore(elm1, next2);
@@ -740,7 +739,7 @@ function restoreCursor(img) {
   var imageWidth = parseInt(img.getAttribute("width"), 10);
   var imageHeight = parseInt(img.getAttribute("height"), 10);
   showCursor(true);
-  drawCursor(parseFloat(currentCursorVal[0]) / (imageWidth/2), parseFloat(currentCursorVal[1]) / (imageHeight/2));
+  drawCursor(parseFloat(currentCursorVal[0]) / (imageWidth / 2), parseFloat(currentCursorVal[1]) / (imageHeight / 2));
 };
 
 // Manually resize some components we can't properly resize just using css.
@@ -773,10 +772,10 @@ function resizeComponents() {
   }
 };
 
-document.addEventListener('content-ready', function(event) {
+document.addEventListener('content-ready', function (event) {
   logger.debug("==Content ready", event.detail);
   if (contentReady) return;
-  switch(event.detail) {
+  switch (event.detail) {
     case 'dom':
       DOMLoaded = true;
       break;
@@ -791,13 +790,13 @@ document.addEventListener('content-ready', function(event) {
   }
   if (DOMLoaded && metadataLoaded && mediasChecked) {
     loadPlayback();
-    document.dispatchEvent(new CustomEvent('playback-ready', {'detail': 'content'}));
+    document.dispatchEvent(new CustomEvent('playback-ready', { 'detail': 'content' }));
   }
 }, false);
 
-document.addEventListener('playback-ready', function(event) {
+document.addEventListener('playback-ready', function (event) {
   logger.debug("==Playback ready", event.detail);
-  switch(event.detail) {
+  switch (event.detail) {
     case 'data':
       dataReady = true;
       break;

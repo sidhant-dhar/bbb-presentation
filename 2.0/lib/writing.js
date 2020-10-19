@@ -27,7 +27,7 @@ const panzoomsXML = url + '/panzooms.xml';
 const cursorXML = url + '/cursor.xml';
 const deskshareXML = url + '/deskshare.xml';
 const textJSON = url + '/presentation_text.json';
-const captionsJSON =  url + '/captions.json';
+const captionsJSON = url + '/captions.json';
 const chatXML = url + '/slides_new.xml';
 const mediasURL = [
   '/video/webcams.webm',
@@ -94,12 +94,14 @@ var canvasTransformed = false;
 function getURLParameters() {
   logger.info("==Getting URL params");
   let map = {};
-  window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {map[key] = value;});
+  window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) { map[key] = value; });
+
   return map;
 };
 
 function getFullURL() {
-  let url = '/presentation/' + meetingId;
+  let url = 'https://meeting-recordings-bbb.s3.ap-south-1.amazonaws.com/' + meetingId;  // meetingId
+  console.log(url);
   return url;
 };
 
@@ -128,7 +130,7 @@ function detectLyingiOS13iPad() {
 // http://stackoverflow.com/a/11381730
 function mobileAndTabletCheck() {
   let check = false;
-  (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))check = true})(navigator.userAgent||navigator.vendor||window.opera);
+  (function (a) { if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true })(navigator.userAgent || navigator.vendor || window.opera);
   return check || detectLyingiOS13iPad();;
 }
 
@@ -283,7 +285,7 @@ function getDeskshareDimensionAtTime(time) {
       }
     }
   }
-  return {width: width, height: height};
+  return { width: width, height: height };
 };
 
 function handlePresentationAreaContent(time) {
@@ -311,7 +313,7 @@ function handlePresentationAreaContent(time) {
 function startLoadingBar() {
   logger.info("==Hide playback content");
   $("#playback-content").css('visibility', 'hidden');
-  Pace.once('done', function() {
+  Pace.once('done', function () {
     // This is a hack to handle data from storage services
     function checkPlaybackLoaded() {
       if (firstLoad) {
@@ -354,7 +356,7 @@ function showLoadingMessage() {
 
 function hideLoadingMessage() {
   $("#loading").css('visibility', 'hidden');
-  $("#loading").css('height','0');
+  $("#loading").css('height', '0');
 };
 
 // Find the key in the timestampToId object of the last entry at or before the provided timestamp
@@ -401,7 +403,7 @@ function runPopcorn() {
   p.code({
     start: 0,
     end: p.duration(),
-    onFrame: function(options) {
+    onFrame: function (options) {
       "use strict";
       var currentTime = p.currentTime();
       if ((!p.paused() || p.seeking()) && (Math.abs(currentTime - lastFrameTime) >= 0.1)) {
@@ -426,12 +428,12 @@ function runPopcorn() {
 
           if (shape != null) {
             if (
-                // It's not the current version of the shape
-                (shapeId != current_shapes[shape_i]) ||
-                // It's in the future
-                (time > t) ||
-                // It's in the past (undo or clear)
-                ((undo != -1) && (undo < currentTime))) {
+              // It's not the current version of the shape
+              (shapeId != current_shapes[shape_i]) ||
+              // It's in the future
+              (time > t) ||
+              // It's in the past (undo or clear)
+              ((undo != -1) && (undo < currentTime))) {
               shape.style.visibility = 'hidden';
             } else {
               shape.style.visibility = 'visible';
@@ -539,7 +541,7 @@ function getDeskshareImage() {
     let element = images[i];
     let id = element.getAttribute("id");
     let href = element.getAttribute("xlink:href");
-    if (href != null && href.indexOf("deskshare") !=-1) {
+    if (href != null && href.indexOf("deskshare") != -1) {
       return id;
     }
   }
@@ -601,18 +603,21 @@ function asyncRequest(method, url) {
   return new Promise(function (resolve, reject) {
     let xhr = new XMLHttpRequest();
     xhr.open(method, url);
+    xhr.setRequestHeader('Content-Type', 'text/xml');
+    xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
     xhr.onload = function () {
       if (xhr.readyState !== xhr.DONE) {
         return;
       }
       if (xhr.status >= 200 && xhr.status < 300) {
+        console.log(xhr);
         resolve(xhr);
       } else {
-        reject({status: xhr.status, statusText: xhr.statusText});
+        reject({ status: xhr.status, statusText: xhr.statusText });
       }
     };
     xhr.onerror = function () {
-      reject({status: xhr.status, statusText: xhr.statusText});
+      reject({ status: xhr.status, statusText: xhr.statusText });
     };
     xhr.send();
   });
@@ -621,7 +626,7 @@ function asyncRequest(method, url) {
 function loadMetadata() {
   asyncRequest('GET', metadataXML).then(function (response) {
     processMetadataXML(response);
-  }).catch(function(error) {
+  }).catch(function (error) {
     logger.error("==Couldn't load metadata.xml", error);
     onLoadComplete(false);
   });
@@ -639,34 +644,34 @@ function processMetadataXML(response) {
       $("#recording-title").attr("title", meetingName[0].textContent);
     }
   }
-  document.dispatchEvent(new CustomEvent('content-ready', {'detail': 'metadata'}));
+  document.dispatchEvent(new CustomEvent('content-ready', { 'detail': 'metadata' }));
 };
 
 function loadData() {
   asyncRequest('GET', shapesSVG).then(function (response) {
     processShapesSVG(response);
-  }).catch(function(error) {
+  }).catch(function (error) {
     logger.error("==Couldn't load shapes.svg", error);
   });
 
   asyncRequest('GET', panzoomsXML).then(function (response) {
     processPanzoomsXML(response);
-  }).catch(function(error) {
+  }).catch(function (error) {
     logger.error("==Couldn't load panzoom.xml", error);
   });
 
   asyncRequest('GET', cursorXML).then(function (response) {
     processCursorXML(response);
-  }).catch(function(error) {
+  }).catch(function (error) {
     logger.error("==Couldn't load cursor.xml", error);
   });
 
   asyncRequest('GET', deskshareXML).then(function (response) {
     processDeskshareXML(response);
-  }).catch(function(error) {
+  }).catch(function (error) {
     if (error.status == 404) {
       logger.warn("==Couldn't find deskshare.xml, assuming there's no deskshare");
-      document.dispatchEvent(new CustomEvent('data-ready', {'detail': 'deskshare-xml'}));
+      document.dispatchEvent(new CustomEvent('data-ready', { 'detail': 'deskshare-xml' }));
     } else {
       logger.error("==Couldn't load deskshare.xml", error);
     }
@@ -680,15 +685,15 @@ function processPanzoomsXML(response) {
   let viewBoxes = response.responseXML.getElementsByTagName("viewBox");
   let pzlen = panZoomArray.length;
   let secondVal;
-  for (var k = 0;k < pzlen; k++) {
-    if (panZoomArray[k+1] == undefined) {
+  for (var k = 0; k < pzlen; k++) {
+    if (panZoomArray[k + 1] == undefined) {
       secondVal = "end";
     } else {
-      secondVal = panZoomArray[k+1].getAttribute("timestamp");
+      secondVal = panZoomArray[k + 1].getAttribute("timestamp");
     }
     vboxValues[[panZoomArray[k].getAttribute("timestamp"), secondVal]] = viewBoxes[k].childNodes[0].data;
   }
-  document.dispatchEvent(new CustomEvent('data-ready', {'detail': 'panzoom'}));
+  document.dispatchEvent(new CustomEvent('data-ready', { 'detail': 'panzoom' }));
 };
 
 function processCursorXML(response) {
@@ -701,7 +706,7 @@ function processCursorXML(response) {
   for (var m = 0; m < clen; m++) {
     cursorValues[cursorArray[m].getAttribute("timestamp")] = coords[m].childNodes[0].data;
   }
-  document.dispatchEvent(new CustomEvent('data-ready', {'detail': 'cursor'}));
+  document.dispatchEvent(new CustomEvent('data-ready', { 'detail': 'cursor' }));
 };
 
 function processShapesSVG(response) {
@@ -715,7 +720,7 @@ function processShapesSVG(response) {
   $(svgobj).html(response.responseText);
 
   // Update the links inside of the presentation to include the full URL
-  $(svgobj).find('image').each(function() {
+  $(svgobj).find('image').each(function () {
     let href = $(this).attr('xlink:href');
     href = url + '/' + href;
     $(this).attr('xlink:href', href);
@@ -747,7 +752,7 @@ function processShapesSVG(response) {
       timestampToId[time] = [];
       timestampToIdKeys.push(time);
     }
-    timestampToId[time].push({id: id, shape: shape_i})
+    timestampToId[time].push({ id: id, shape: shape_i })
 
     mainShapeIds[shape_i] = id;
   }
@@ -755,15 +760,15 @@ function processShapesSVG(response) {
   asyncRequest('GET', textJSON).then(function (response) {
     processTextJSON(response);
     processSlideAspectTimes();
-    document.dispatchEvent(new CustomEvent('data-ready', {'detail': 'text'}));
-  }).catch(function(error) {
+    document.dispatchEvent(new CustomEvent('data-ready', { 'detail': 'text' }));
+  }).catch(function (error) {
     logger.warn("==Couldn't load presentation_text.json", error);
     processTextFallback();
     processSlideAspectTimes();
-    document.dispatchEvent(new CustomEvent('data-ready', {'detail': 'text'}));
+    document.dispatchEvent(new CustomEvent('data-ready', { 'detail': 'text' }));
   });
 
-  document.dispatchEvent(new CustomEvent('data-ready', {'detail': 'svg'}));
+  document.dispatchEvent(new CustomEvent('data-ready', { 'detail': 'svg' }));
 };
 
 function processDeskshareXML(response) {
@@ -773,15 +778,15 @@ function processDeskshareXML(response) {
   if (deskshareArray != null && deskshareArray.length != 0) {
     for (var m = 0; m < deskshareArray.length; m++) {
       let deskshareEvent = [
-          parseFloat(deskshareArray[m].getAttribute("start_timestamp")),
-          parseFloat(deskshareArray[m].getAttribute("stop_timestamp")),
-          parseFloat(deskshareArray[m].getAttribute("video_width")),
-          parseFloat(deskshareArray[m].getAttribute("video_height"))
+        parseFloat(deskshareArray[m].getAttribute("start_timestamp")),
+        parseFloat(deskshareArray[m].getAttribute("stop_timestamp")),
+        parseFloat(deskshareArray[m].getAttribute("video_width")),
+        parseFloat(deskshareArray[m].getAttribute("video_height"))
       ];
       deskshareEvents[m] = deskshareEvent;
     }
   }
-  document.dispatchEvent(new CustomEvent('data-ready', {'detail': 'deskshare-xml'}));
+  document.dispatchEvent(new CustomEvent('data-ready', { 'detail': 'deskshare-xml' }));
 };
 
 function checkMediaURL(url) {
@@ -801,7 +806,7 @@ function checkMediaURL(url) {
       }
       mediasToCheck--;
       if (mediasToCheck == 0) {
-        document.dispatchEvent(new CustomEvent('content-ready', {'detail': 'medias-checked'}));
+        document.dispatchEvent(new CustomEvent('content-ready', { 'detail': 'medias-checked' }));
       }
     }
   };
@@ -809,7 +814,7 @@ function checkMediaURL(url) {
 };
 
 function checkMedias() {
-  for (var i = 0 ; i < mediasURL.length ; i++) {
+  for (var i = 0; i < mediasURL.length; i++) {
     checkMediaURL(url + mediasURL[i]);
   }
 };
@@ -826,7 +831,7 @@ function initPopcorn() {
 
   // Popcorn documentation suggests this way to get the duration,
   // since this information does not come with 'loadedmetadata' event.
-  Popcorn("#video").cue(2, function() {
+  Popcorn("#video").cue(2, function () {
     meetingDuration = parseFloat(Popcorn("#video").duration().toFixed(1));
     logger.info("==Meeting duration (seconds)", meetingDuration);
   });
@@ -876,14 +881,14 @@ function processTextFallback() {
       var textPath = url + "/" + images[m].getAttribute("text");
       textPathToImgId[textPath] = images[m].getAttribute("id");
 
-      getTextAsync(textPath,textPathToImgId);
+      getTextAsync(textPath, textPathToImgId);
     }
   }
 };
 
 function getTextAsync(textPath, textPathToImgId) {
   let xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
       if (xhr.status == 200 || xhr.status == 206) {
         var pathname = new URL(xhr.responseURL).pathname;
@@ -938,11 +943,11 @@ function processAspectValue(vboxWidth, vboxHeight, time, lastAspectValue) {
       // Fit-to-width: returning vbox aspect
       if (vboxWidth == imageWidth && vboxHeight < imageHeight) {
         logger.debug("==Fit-to-width aspect detected");
-        return parseFloat(vboxWidth/vboxHeight);
+        return parseFloat(vboxWidth / vboxHeight);
       } else if (vboxWidth == imageWidth && vboxHeight == imageHeight) {
         // Fit-to-page: returning image aspect
         logger.debug("==Fit-to-page aspect detected");
-        return parseFloat(imageWidth/imageHeight);
+        return parseFloat(imageWidth / imageHeight);
       } else {
         // If it's not fit-to-width neither fit-to-page we return the previous aspect
         return lastAspectValue;
@@ -959,7 +964,7 @@ function processAspectValue(vboxWidth, vboxHeight, time, lastAspectValue) {
 
 // A small hack to hide the cursor when resizing the window, so it's not
 // misplaced while the window is being resized
-window.onresize = function(event) {
+window.onresize = function (event) {
   showCursor(false);
   resizeComponents();
   resizeSlide();
@@ -984,7 +989,7 @@ function resizeSlide() {
     $slide.css("max-width", maxWidth);
     let maxHeight = $slide.parent().width() / currentSlideAspect;
     $slide.css("max-height", maxHeight);
-    logger.debug("==Size", {maxWidth, maxHeight});
+    logger.debug("==Size", { maxWidth, maxHeight });
   } else {
     logger.debug("==Slide not ready");
   }
@@ -1000,13 +1005,13 @@ function resizeDeskshare() {
     let videoWidth = parseInt(deskshareVideo.videoWidth, 10);
     let videoHeight = parseInt(deskshareVideo.videoHeight, 10);
 
-    let aspectRatio = videoWidth/videoHeight;
+    let aspectRatio = videoWidth / videoHeight;
     let maxWidth = aspectRatio * $deskshareVideo.parent().outerHeight();
     $deskshareVideo.css("max-width", maxWidth);
 
     let maxHeight = $deskshareVideo.parent().width() / aspectRatio;
     $deskshareVideo.css("max-height", maxHeight);
-    logger.debug("==Size", {maxWidth, maxHeight});
+    logger.debug("==Size", { maxWidth, maxHeight });
   } else {
     logger.debug("==Deskshare not ready");
   }
@@ -1024,10 +1029,10 @@ function linkChatToMedia() {
   document.dispatchEvent(event);
 }
 
-document.addEventListener('media-ready', function(event) {
+document.addEventListener('media-ready', function (event) {
   logger.debug("==Media ready", event.detail);
   if (mediaReady) return;
-  switch(event.detail) {
+  switch (event.detail) {
     case 'video':
       videoReady = true;
       break;
@@ -1047,14 +1052,14 @@ document.addEventListener('media-ready', function(event) {
     logger.info("==All medias can be played");
     setMediaSync();
     linkChatToMedia();
-    document.dispatchEvent(new CustomEvent('playback-ready', {'detail': 'media'}));
+    document.dispatchEvent(new CustomEvent('playback-ready', { 'detail': 'media' }));
   }
 }, false);
 
-document.addEventListener('data-ready', function(event) {
+document.addEventListener('data-ready', function (event) {
   logger.debug("==Data ready", event.detail);
   if (dataReady) return;
-  switch(event.detail) {
+  switch (event.detail) {
     case 'svg':
       svgReady = true;
       break;
@@ -1074,6 +1079,6 @@ document.addEventListener('data-ready', function(event) {
       logger.warn("==Unhandled data-ready event", event.detail);
   }
   if (svgReady && textReady && panzoomReady && cursorReady && deskshareXMLReady) {
-    document.dispatchEvent(new CustomEvent('playback-ready', {'detail': 'data'}));
+    document.dispatchEvent(new CustomEvent('playback-ready', { 'detail': 'data' }));
   }
 }, false);
